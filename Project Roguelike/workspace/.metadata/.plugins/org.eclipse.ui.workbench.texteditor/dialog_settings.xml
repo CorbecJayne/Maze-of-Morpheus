@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="e" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="true" key="wholeword"/>
+		<list key="findhistory">
+			<item value="arg0"/>
+			<item value="0"/>
+			<item value="1"/>
+			<item value="3"/>
+			<item value="2"/>
+			<item value="i"/>
+			<item value="Focus"/>
+			<item value="][0]"/>
+		</list>
+		<list key="replacehistory">
+			<item value="e"/>
+			<item value="new JLabel(flieseBild)"/>
+			<item value="new JLabel(wandBild)"/>
+			<item value="new JLabel(ausgangBild)"/>
+			<item value="new JLabel(spielerBild)"/>
+			<item value="0"/>
+			<item value="j"/>
+			<item value="Border"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="305" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="444" key="DIALOG_HEIGHT"/>
+		<item value="817" key="DIALOG_X_ORIGIN"/>
+		<item value="229" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>
