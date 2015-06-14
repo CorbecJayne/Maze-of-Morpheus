@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=KNIFFEL()
+comment1.params=
+comment1.target=void\ w\u00FCrfeln()
+comment2.params=wuerfelnummer
+comment2.target=void\ EinenW\u00FCrfelNochmalWerfen(int)
+comment3.params=aufnahmewuerfel
+comment3.target=void\ wuerfeln(int[])
+numComments=4
