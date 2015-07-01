@@ -1,0 +1,36 @@
+package gameElements;
+
+import javax.swing.ImageIcon;
+
+import auxilary.Vector2;
+
+public class Floor extends Element {
+	
+	protected final ImageIcon[] icons = {new ImageIcon(getClass().getResource("Fliese" + ".png"))};
+	protected final int id = 0;
+
+	protected ImageIcon icon = icons[0];
+	public Vector2 coords;
+
+	public Floor(int x, int y) {
+		super(x, y);
+	}
+	public Floor(Vector2 coords) {
+		super(coords);
+	}
+	
+	@Override
+	public ImageIcon setIcon() {
+		return setIcon(0);
+	}
+	@Override
+	public ImageIcon setIcon(int iconIndex) {
+		this.icon = icons[iconIndex];
+		return this.icon;
+	}
+	
+	public ImageIcon getIcon() {
+		return this.icon;
+	}
+	
+}

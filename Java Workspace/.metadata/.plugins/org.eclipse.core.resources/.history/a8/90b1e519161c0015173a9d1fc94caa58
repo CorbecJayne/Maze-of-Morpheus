@@ -1,0 +1,15 @@
+import levels.Level0;
+
+
+public class Test {
+	public static void main(String[] args) {
+		int[][] q = Level0.getLevel();
+		for (int x = 0; x < q.length; ++x) {
+
+			for (int y = 0; y < q[x].length; ++y) {
+				System.out.print(q[x][y]);
+			}
+			System.out.println();
+		}
+	}
+}

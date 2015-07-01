@@ -1,0 +1,29 @@
+package gameElements;
+
+import javax.swing.ImageIcon;
+
+import auxilary.Vector2;
+
+public class Floor extends Element {
+	public ImageIcon defaultIcon = new ImageIcon(getClass().getResource("Fliese" + ".png"));
+	public int id = 0;
+	
+	public ImageIcon currentIcon = defaultIcon;
+	public Vector2 coords;
+
+	public Floor(int x, int y) {
+		super(x, y);
+	}
+	public Floor(Vector2 coords) {
+		super(coords);
+	}
+	
+	public ImageIcon getIcon() {
+		return this.currentIcon;
+	}
+	public ImageIcon setDafult() {
+		this.currentIcon = defaultIcon;
+		return getIcon();
+	}
+
+}

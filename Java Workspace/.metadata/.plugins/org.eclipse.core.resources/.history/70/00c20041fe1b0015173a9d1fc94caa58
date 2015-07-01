@@ -1,0 +1,15 @@
+package gameElements;
+
+import javax.swing.ImageIcon;
+
+import auxilary.Vector2;
+
+public class Player extends Element {
+	
+	public Exit(int x, int y) {
+		super(x, y);
+		defaultIcon = new ImageIcon(getClass().getResource("Spieler" + ".png"));
+		id = 3;
+	}
+
+}

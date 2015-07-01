@@ -1,0 +1,108 @@
+package primary;
+
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+import auxilary.*;
+
+public class Client {
+	// Urspreungliche Masseinheiten fuer Fenster- und Spielelemente
+	private final int frameWidth = 1024;
+	private final int frameHeight = 788;
+	private final int blockSize = 32;
+	private final int statsHeight = 52;
+	private final int widthBlocks = frameWidth / blockSize; // 32
+	private final int heightBlocks = (frameHeight - statsHeight) / blockSize; // 23
+	//Spieltitel
+	private final String gameTitle = "Maze of Morpheus";
+	// Urspruengliche Fensterelemente
+	private JFrame frame;
+	private JSplitPane frameSplit;
+	private JPanel boardPanel;
+	private JPanel statsPanel;
+	
+	// Spieler-Koordinaten
+	private Vector2 player;
+
+	// Startet das eigentliche Gameplay
+	public void run() {
+		setupFrame();
+	}
+	
+	public void setupFrame() {
+		// JFrame Fenster erstellen, Titel setzen, Groesse setzen, sichtbar setzen
+		frame = new JFrame(gameTitle);
+		frame.setSize(frameWidth, frameHeight);
+		frame.setVisible(true);
+		// Fenstergreosse kann nicht waehrend dem Spiell veraendert werden (weil das nur nerven wuerde)
+		frame.setResizable(false);
+		// Terminiert dass Programm, wenn das X im Fenster gedrueckt wird
+		frame.setDefaultCloseOperation(3);
+		frame.addKeyListener(new KeyListener() {
+			@Override
+			public void keyTyped(final KeyEvent e) {
+			}
+
+			@Override
+			public void keyReleased(final KeyEvent e) {
+			}
+
+			@Override
+			public void keyPressed(final KeyEvent e) {
+				switch (e.getKeyCode()) {
+				case KeyEvent.VK_W:
+				case KeyEvent.VK_UP:
+					movePlayerUp();
+					herzenUeberpruefen();
+					manaUeberpruefen();
+					MuenzenUeberpruefen();
+					break;
+				case KeyEvent.VK_A:
+				case KeyEvent.VK_LEFT:
+					movePlayerLeft();
+					herzenUeberpruefen();
+					manaUeberpruefen();
+					MuenzenUeberpruefen();
+					break;
+				case KeyEvent.VK_S:
+				case KeyEvent.VK_DOWN:
+					movePlayerDown();
+					herzenUeberpruefen();
+					manaUeberpruefen();
+					MuenzenUeberpruefen();
+					break;
+				case KeyEvent.VK_D:
+				case KeyEvent.VK_RIGHT:
+					movePlayerRight();
+					herzenUeberpruefen();
+					manaUeberpruefen();
+					MuenzenUeberpruefen();
+					break;
+				case KeyEvent.VK_B:
+					bomb();
+					herzenUeberpruefen();
+					manaUeberpruefen();
+					MuenzenUeberpruefen();
+					break;
+				case KeyEvent.VK_E:
+					explode();
+//					delay
+//					explosionWeg();
+					break;
+				case KeyEvent.VK_F:
+					fireball();
+					break;
+				case KeyEvent.VK_L:
+					feuerballFliegt();
+					break;
+				default:
+					break;
+				}
+			}
+		});
+	}
+	
+	
+}

@@ -1,0 +1,46 @@
+package primary;
+
+import java.awt.*;
+
+import javax.swing.*;
+
+import auxilary.*;
+
+public class Client {
+	// Urspreungliche Masseinheiten fuer Fenster- und Spielelemente
+	private final int frameWidth = 1024;
+	private final int frameHeight = 788;
+	private final int blockSize = 32;
+	private final int statsHeight = 52;
+	private final int widthBlocks = frameWidth / blockSize; // 32
+	private final int heightBlocks = (frameHeight - statsHeight) / blockSize; // 23
+	//Spieltitel
+	private final String gameTitle = "Maze of Morpheus";
+	// Urspruengliche Fensterelemente
+	private JFrame frame;
+	private JSplitPane frameSplit;
+	private JPanel boardPanel;
+	private JPanel statsPanel;
+	
+	// Spieler-Koordinaten
+	private Vector2 player;
+
+	// Startet das eigentliche Gameplay
+	public void run() {
+		setupFrame();
+	}
+	
+	public void setupFrame() {
+		// JFrame Fenster erstellen, Titel setzen, sichtbar setzen, Groesse
+		// setzen
+		frame = new JFrame(gameTitle);
+		frame.setSize(frameWidth, frameHoehe);
+		// Macht es, dass das Fenster nicht groesser/kleiner gemacht werden kann
+		// (weil das nur nervt)
+		frame.setResizable(false);
+		frame.setDefaultCloseOperation(3);
+		frame.addKeyListener(new KeyListener() {
+	}
+	
+	
+}

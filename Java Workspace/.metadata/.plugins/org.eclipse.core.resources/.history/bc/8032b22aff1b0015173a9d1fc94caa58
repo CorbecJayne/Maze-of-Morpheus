@@ -1,0 +1,17 @@
+package gameElements;
+
+import javax.swing.ImageIcon;
+
+public interface Element {
+	
+	ImageIcon currentIcon = null;
+	ImageIcon defaultIcon = null;
+	public default ImageIcon getIcon() {
+		return this.currentIcon;
+	}
+	public default ImageIcon setDafult() {
+		this.currentIcon = defaultIcon;
+		return getIcon();
+	}
+	
+}

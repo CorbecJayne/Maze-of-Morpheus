@@ -1,0 +1,8 @@
+import levels.Level0;
+
+
+public class Test {
+	public static void main(String[] args) {
+		int[][] q = Level0.getLevel();
+	}
+}

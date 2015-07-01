@@ -1,0 +1,28 @@
+package gameElements;
+
+import javax.swing.ImageIcon;
+
+import auxilary.Vector2;
+
+public class Player extends Element {
+	
+	protected final ImageIcon[] icons = {new ImageIcon(getClass().getResource("Fliese" + ".png"))};
+	
+	protected final int id = 3;
+	public Vector2 coords;
+
+	public Player(int x, int y) {
+		super(x, y);
+	}
+	public Player(Vector2 coords) {
+		super(coords);
+	}
+	
+	public ImageIcon getIcon() {
+		return this.icons[0];
+	}
+	public ImageIcon getIcon(int iconIndex) {
+		return this.icons[iconIndex];
+	}
+	
+}

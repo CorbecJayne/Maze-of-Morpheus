@@ -1,0 +1,22 @@
+package gameElements;
+
+import javax.swing.ImageIcon;
+
+import auxilary.Vector2;
+
+public interface Element {
+	ImageIcon defaultIcon;
+	int id;
+	
+	ImageIcon currentIcon = defaultIcon;
+	public Vector2 coords;
+	
+	public default ImageIcon getIcon() {
+		return this.currentIcon;
+	}
+	public default ImageIcon setDafult() {
+		this.currentIcon = defaultIcon;
+		return getIcon();
+	}
+	
+}

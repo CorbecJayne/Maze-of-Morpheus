@@ -1,0 +1,15 @@
+package gameElements;
+
+import javax.swing.ImageIcon;
+
+import auxilary.Vector2;
+
+public class Wall extends Element {
+	
+	public Wall(int x, int y) {
+		super(x, y);
+		defaultIcon = new ImageIcon(getClass().getResource("Ausgang" + ".png"));
+		id = 2;
+	}
+
+}

@@ -1,0 +1,24 @@
+package gameElements;
+
+import javax.swing.ImageIcon;
+
+import auxilary.Vector2;
+
+public class Exit extends Element {
+	public ImageIcon defaultIcon = new ImageIcon(getClass().getResource("Ausgang" + ".png"));
+	public int id = 2;
+	public Vector2 coords;
+	
+	public Exit(int x, int y) {
+		super(x, y);
+	}
+	public Exit(Vector2 coords) {
+		super(coords);
+	}
+	
+	@Override
+	public ImageIcon getIcon() {
+		return this.deafaultIcon;
+	}
+
+}
