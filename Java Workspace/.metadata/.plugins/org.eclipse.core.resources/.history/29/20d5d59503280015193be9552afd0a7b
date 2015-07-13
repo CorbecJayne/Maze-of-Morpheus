@@ -181,17 +181,14 @@ public class Client {
 	}
 	
 	protected void rightAction() {
-		changeIcon(player, 1);
 		logicPlayer(1, 0);
 	}
 
 	protected void downAction() {
-		changeIcon(player, 2);
 		logicPlayer(0, -1);
 	}
 
 	protected void leftAction() {
-		changeIcon(player, 3);
 		logicPlayer(-1, 0);
 	}
 	

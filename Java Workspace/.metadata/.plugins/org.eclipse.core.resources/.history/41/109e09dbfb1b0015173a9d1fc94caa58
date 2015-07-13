@@ -1,8 +1,0 @@
-import levels.Level0;
-
-
-public class Test {
-	public static void main(String[] args) {
-		System.out.println(Level0.getLevel());
-	}
-}

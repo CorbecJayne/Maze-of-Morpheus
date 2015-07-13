@@ -1,0 +1,9 @@
+package auxilary;
+
+import javax.swing.ImageIcon;
+
+public class Img {
+	public ImageIcon img(String icon) {
+		
+	}
+}
