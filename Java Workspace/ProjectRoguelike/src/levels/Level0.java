@@ -14,8 +14,9 @@ public class Level0 {
 				result[x][y] = 0;
 			}
 		}
-		result[1][1] = 3;
-		result[30][21] = 2;
+		result[1][1] = 3;  //Setze Spieler auf Position 1/1
+		result[30][21] = 2;//Setze Ausgang auf Position 30/21
+		result[20][19] = 4;//Setze Stachelfalle auf Position 20/19
 		
 		return result;
 	}

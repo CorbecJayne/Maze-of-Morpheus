@@ -34,12 +34,13 @@ public class Client {
 	
 	// Spieler- und Gegner-Koordinaten
 	private Vector2 player;
+	private Vector2 spikeTrap;
 	private ArrayList<Vector2> enemies;
 	
 	// Graphische und Spielerische Matrix
 	private JLabel[][] board;
 	private Element[][] matrix;
-
+	
 	// Startet das eigentliche Gameplay
 	public void run() {
 		setupFrame();
@@ -169,6 +170,8 @@ public class Client {
 		case 2:
 			System.exit(0);
 			break;
+		case 4:
+			movePlayer(xGoal, yGoal);
 		default:
 			// Don't move the player.
 			break;

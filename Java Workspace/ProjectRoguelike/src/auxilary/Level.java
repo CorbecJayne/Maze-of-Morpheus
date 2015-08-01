@@ -4,6 +4,7 @@ import gameElements.Element;
 import gameElements.Exit;
 import gameElements.Floor;
 import gameElements.Player;
+import gameElements.SpikeTrap;
 import gameElements.Wall;
 
 import java.util.ArrayList;
@@ -38,6 +39,9 @@ public class Level {
 				case 3:
 					matrix[x][y] = new Player(x, y);
 					player = new Vector2(x, y);
+					break;
+				case 4:
+					matrix[x][y] = new SpikeTrap(x, y);
 					break;
 				default:
 					break;
