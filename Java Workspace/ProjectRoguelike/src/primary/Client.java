@@ -41,6 +41,9 @@ public class Client {
 	private JLabel[][] board;
 	private Element[][] matrix;
 	
+	//Variable zum Erkennen der Ausrichtung der Spielfigur
+	private String orientation;  //N für North, E für East, S für South, W für West
+	
 	// Startet das eigentliche Gameplay
 	public void run() {
 		setupFrame();
@@ -59,6 +62,7 @@ public class Client {
 		statsPanel = new JPanel();
 		splitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT,statsPanel, boardPanel);
 		splitPane.setDividerLocation(statsHeight);
+		splitPane.setDividerSize(0);
 		frame.add(splitPane);
 	}
 	
@@ -172,6 +176,18 @@ public class Client {
 			break;
 		case 4:
 			movePlayer(xGoal, yGoal);
+			if (orientation == "N"){
+				changeIcon(player,4 );
+				}
+			if (orientation == "E"){
+				changeIcon(player,5 );
+				}
+			if (orientation == "S"){
+				changeIcon(player,6 );
+				}
+			if (orientation == "W"){
+				changeIcon(player,7 );
+				}
 		default:
 			// Don't move the player.
 			break;
@@ -181,21 +197,25 @@ public class Client {
 	protected void upAction() {
 		changeIcon(player, 0);
 		logicPlayer(0, 1);
+		orientation = "N";
 	}
 	
 	protected void rightAction() {
 		changeIcon(player, 1);
 		logicPlayer(1, 0);
+		orientation = "E";
 	}
 
 	protected void downAction() {
 		changeIcon(player, 2);
 		logicPlayer(0, -1);
+		orientation = "S";
 	}
 
 	protected void leftAction() {
 		changeIcon(player, 3);
 		logicPlayer(-1, 0);
+		orientation = "W";
 	}
 	
 	

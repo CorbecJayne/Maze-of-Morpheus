@@ -1,9 +1,0 @@
-package auxilary;
-
-import javax.swing.ImageIcon;
-
-public class Img {
-	public static ImageIcon img(String imageName) {
-		return new ImageIcon(getClass().getResource(imageName + ""));
-	}
-}

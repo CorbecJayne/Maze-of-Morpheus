@@ -8,4 +8,5 @@
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="auxilary.Level"/>
 <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
+<fullyQualifiedTypeName name="gameElements.SpikeTrap"/>
 </qualifiedTypeNameHistroy>
